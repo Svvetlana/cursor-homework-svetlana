@@ -39,7 +39,7 @@ const priceWithDiscount = (
 );
 console.log(`priceWithDiscount`, priceWithDiscount);
 
-const profit = productsPrice / 2 - discount;
+const profit = productsPrice / 2 - productsPrice * discount / 100;
 console.log(`profit`, profit);
 
 //Advansed
