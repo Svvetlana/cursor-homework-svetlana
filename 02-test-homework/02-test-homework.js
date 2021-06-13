@@ -1,11 +1,11 @@
 let firstNumber = null;
 let secondNumber = null;
 do {
-  firstNumber = prompt(`Введите первое целое число`);  
+  firstNumber = +prompt(`Введите первое целое число`);  
 } while ((isNaN(firstNumber) || !(firstNumber % 1 === 0) || !firstNumber));
 
 do {
-secondNumber = prompt(`Введите второе целое число`);
+secondNumber = +prompt(`Введите второе целое число`);
 } while ((isNaN(secondNumber) || !(secondNumber % 1 === 0) || !secondNumber));
 
 const isEven = confirm(`Будем ли пропускать четные числа?`);
