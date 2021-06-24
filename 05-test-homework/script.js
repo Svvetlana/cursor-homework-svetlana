@@ -13,16 +13,16 @@ const getRandomArray = (length, min, max) => {
 console.log(`Массив случайных чисел: ${getRandomArray(15, 1, 100)}`);
 
 //2.
-const getModa = (...numbers) => {
+// const getModa = (...numbers) => {
 
-    const isNotInteger = numbers.filter(number => Number.isInteger(number));
+//     const isNotInteger = numbers.filter(number => Number.isInteger(number));
 
-    return
-}
+//     return
+// }
 
-console.log(
-    `Мода равна: ${getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)}`
-);
+// console.log(
+//     `Мода равна: ${getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)}`
+// );
 
 //3.
 const getAverage = (...numbers) => {
@@ -107,6 +107,7 @@ console.log(
 //9.
 const divideByThree = (word) => {
 
+    word = word.toLowerCase().replaceAll(' ', '');
     let divideWord = [];
 
     for (let i = 0; i < word.length; i += 3)
@@ -118,13 +119,13 @@ const divideByThree = (word) => {
 console.log(`Слово разбито по 3 буквы: ${divideByThree('Live')}`);
 
 //10.
-const generateCombinayions = (word) => {
+// const generateCombinayions = (word) => {
 
-    let repositioning = [];
-    for (let i = 0; i < word.length; i++) {
+//     let repositioning = [];
+//     for (let i = 0; i < word.length; i++) {
 
-    }
+//     }
 
-    return
-}
-console.log(`Уникальные перестановки букв в слове: ${generateCombinayions('man')}`);
+//     return
+// }
+// console.log(`Уникальные перестановки букв в слове: ${generateCombinayions('man')}`);
