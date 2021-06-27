@@ -1,6 +1,5 @@
 //1.
 const getRandomArray = (length, min, max) => {
-
     const randomArray = [];
 
     for (let i = 0; i < length; i++) {
@@ -12,24 +11,10 @@ const getRandomArray = (length, min, max) => {
 
 console.log(`Массив случайных чисел: ${getRandomArray(15, 1, 100)}`);
 
-//2.
-// const getModa = (...numbers) => {
-
-//     const isNotInteger = numbers.filter(number => Number.isInteger(number));
-
-//     return
-// }
-
-// console.log(
-//     `Мода равна: ${getModa(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2)}`
-// );
-
 //3.
 const getAverage = (...numbers) => {
-
     const filtered = numbers.filter(number => Number.isInteger(number));
     const sum = filtered.reduce((sum, number) => {
-
         return sum + number;
     }, 0);
 
@@ -41,13 +26,11 @@ console.log(`Среднеарифметическое число:
 
 //4.
 const getMedian = (...numbers) => {
-
     const filtered = numbers.filter(number => Number.isInteger(number))
         .sort((a, b) => a - b);
     const middleIndex = Math.trunc(filtered.length / 2);
 
     if (filtered.length % 2 === 0) {
-
         return (filtered[middleIndex] + filtered[middleIndex - 1]) / 2;
     }
 
@@ -58,7 +41,6 @@ console.log(`Медиана , нецелые числа игнорируются
 
 //5.
 const filterEvenNumbers = (...numbers) => {
-
     return numbers.filter(number => number % 2 !== 0);
 }
 
@@ -66,7 +48,6 @@ console.log(`Массив нечетных чисел: ${filterEvenNumbers(1, 2,
 
 //6.
 const countPositiveNumbers = (...numbers) => {
-
     return numbers.filter(number => number > 0).length;
 }
 
@@ -76,7 +57,6 @@ console.log(
 
 //7.
 const getDividedByFive = (...numbers) => {
-
     return numbers.filter(number => number % 5 === 0);
 }
 
@@ -106,26 +86,14 @@ console.log(
 
 //9.
 const divideByThree = (word) => {
-
-    word = word.toLowerCase().replaceAll(' ', '');
+    wordSmall = word.toLowerCase().replaceAll(' ', '');
     let divideWord = [];
 
-    for (let i = 0; i < word.length; i += 3)
-        divideWord.push(word.slice(i, i + 3));
+    for (let i = 0; i < wordSmall.length; i += 3) {
+        divideWord.push(wordSmall.slice(i, i + 3));
+    }
 
-    return divideWord
+    return divideWord;
 }
 
 console.log(`Слово разбито по 3 буквы: ${divideByThree('Live')}`);
-
-//10.
-// const generateCombinayions = (word) => {
-
-//     let repositioning = [];
-//     for (let i = 0; i < word.length; i++) {
-
-//     }
-
-//     return
-// }
-// console.log(`Уникальные перестановки букв в слове: ${generateCombinayions('man')}`);

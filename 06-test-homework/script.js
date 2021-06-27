@@ -64,7 +64,8 @@ console.log(getStudentInfo(students[2]));
 
 //4.
 const getStudentsNames = students => {
-  const studentNames = students.map(student => student.name).sort();;
+  const studentNames = students.map(student => student.name)
+    .map(student => student[0].toUpperCase() + student.slice(1)).sort();;
 
   return studentNames;
 }
