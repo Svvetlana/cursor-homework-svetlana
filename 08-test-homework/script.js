@@ -81,13 +81,20 @@ console.log(`student.getMarks: `, student.getMarks);
 console.log(`student.getAverageMark: `, student.getAverageMark());
 
 //6.
+console.group(`Студента відраховано`)
 student.dismiss();
 console.log(`student.dismiss(): `, student.getMarks);
+console.groupEnd();
 
 //7.
+console.group(`Студента поновлено`)
 student.recover();
+console.log(`student.getInfo: `, student.getInfo);
 console.log(`student.recover(): `, student.getMarks);
+console.log(`student.getAverageMark: `, student.getAverageMark());
 console.groupEnd();
+console.groupEnd();
+
 
 //Advanced
 
@@ -97,3 +104,4 @@ console.group(`Студент, який отримує стипендію`);
 const budgetStudent = new BudgetStudent(`Вищої школи Психотерапії м.Одеса`, 1, `Остап Родоманський`);
 budgetStudent.marks = [5, 4, 4, 5];
 budgetStudent.getScholarship(1400);
+console.groupEnd();
