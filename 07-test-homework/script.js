@@ -32,9 +32,9 @@ function getMySalary() {
         const taxes = +(salary * this.tax).toFixed(2);
         const profit = +(salary - taxes);
         const mySalary = {
-            salary: salary,
-            taxes: taxes,
-            profit: profit,
+            salary,
+            taxes,
+            profit
         };
 
         return console.log(mySalary);

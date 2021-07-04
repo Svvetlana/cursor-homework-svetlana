@@ -42,7 +42,9 @@ const getAverageMark = student => {
   const studentSubjects = student.subjects;
   const allMarks = [];
 
-  for (subject in studentSubjects) allMarks.push(...studentSubjects[subject]);
+  for (subject in studentSubjects) {
+    allMarks.push(...studentSubjects[subject]);
+  }
 
   return +getAverage(...allMarks).toFixed(2);
 }
@@ -51,7 +53,7 @@ console.log(getAverageMark(students[1]));
 
 //3.
 const getStudentInfo = student => {
-  let studentInfo = {
+  const studentInfo = {
     course: student.course,
     name: student.name,
     averageMark: getAverageMark(student)
@@ -78,16 +80,15 @@ const getBestStudent = students => {
     getAverageMark(student)));
   const bestStudents = [];
 
-  for (student of students) if (maxAverageMark === getAverageMark(student))
-    bestStudents.push(student.name);
+  for (student of students) {
+    (maxAverageMark === getAverageMark(student))
+      bestStudents.push(student.name);
+  }
 
   return bestStudents;
 }
 
 console.log(getBestStudent(students));
-
-
-
 
 //6.
 const calculateWordLetters = word => {
@@ -95,13 +96,9 @@ const calculateWordLetters = word => {
   const letterRepeats = {};
 
   for (let i = 0; i < wordArray.length; i++) {
-    if (letterRepeats[wordArray[i]]) {
-      letterRepeats[wordArray[i]] = letterRepeats[wordArray[i]] + 1;
-    } else {
-      letterRepeats[wordArray[i]] = 1;
-    }
+    letterRepeats[wordArray[i]] = letterRepeats[wordArray[i]] + 1 || 1;
   }
-  
+
   return letterRepeats;
 }
 
