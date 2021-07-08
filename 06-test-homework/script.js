@@ -82,7 +82,7 @@ const getBestStudent = students => {
 
   for (student of students) {
     (maxAverageMark === getAverageMark(student))
-      bestStudents.push(student.name);
+    bestStudents.push(student.name);
   }
 
   return bestStudents;
