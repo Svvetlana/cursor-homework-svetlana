@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    background-image: url("../img/img1.jpg");
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   }
+
+   .content {
+       min-height: 90vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+    }
+
+   .input {
+       display: flex;
+       margin-top: 20px;
+       padding: 10px 20px;
+       min-width: 120px;
+       min-height: 35px;
+    }
+
+   .result {
+    margin-top: 20px;
+    padding: 10px 20px;
+    max-width: 120px;
+    font-size: 120%; 
+   }
