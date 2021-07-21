@@ -1,4 +1,3 @@
-//1.
 class Student {
     constructor(university, course, fullName) {
         this.university = university;
@@ -25,7 +24,7 @@ class Student {
         if (this.dismissed) {
             return null;
         }
-        return this.marks.push(newMark);
+        return this.marks = [...this.marks, newMark];
     }
 
     //5.
@@ -47,25 +46,30 @@ class Student {
 //Advanced
 //1.
 class BudgetStudent extends Student {
-    constructor(university, course, fullName) {
-        super (university, course, fullName);
-        
+    constructor(university, course, fullName, marks) {
+        super(university, course, fullName, marks);
+
         setInterval(() => this.getScholarship(), 30000);
-    } 
+    }
 
     getScholarship(scholarship) {
         if (!this.dismissed && this.getAverageMark() >= 4) {
             return console.log(`Ви отримали 1400 грн. стипендії!`);
         }
 
-            return console.log(`Ви не отримали стипендію!`);
+        return console.log(`Ви не отримали стипендію!`);
     }
 }
 //Обычный
 console.group(`Звичайний студент`);
 
 //1.
-const student = new Student(`Вищої школи Психотерапії м.Одеса`, 1, `Остап Бендер`);
+const student = new Student(
+    `Вищої школи Психотерапії м.Одеса`,
+    1,
+    `Остап Бендер`,
+    [5, 4, 4, 5]
+);
 
 //2.
 console.log(`student.getInfo: `, student.getInfo);
@@ -101,7 +105,12 @@ console.groupEnd();
 console.group(`Студент, який отримує стипендію`);
 
 //1.Со стипендией
-const budgetStudent = new BudgetStudent(`Вищої школи Психотерапії м.Одеса`, 1, `Остап Родоманський`);
+const budgetStudent = new BudgetStudent(
+    `Вищої школи Психотерапії м.Одеса`,
+    1,
+    `Остап Родоманський`,
+    [5, 4, 4, 5]
+);
 budgetStudent.marks = [5, 4, 4, 5];
 budgetStudent.getScholarship(1400);
 console.groupEnd();
