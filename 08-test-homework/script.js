@@ -1,9 +1,9 @@
 class Student {
-    constructor(university, course, fullName) {
+    constructor(university, course, fullName, marks) {
         this.university = university;
         this.course = course;
         this.fullName = fullName;
-        this.marks = [5, 4, 4, 5];
+        this.marks = marks;
         this.dismissed = false;
     }
 
@@ -66,7 +66,7 @@ console.group(`Звичайний студент`);
 //1.
 const student = new Student(
     `Вищої школи Психотерапії м.Одеса`,
-    1,
+    `1`,
     `Остап Бендер`,
     [5, 4, 4, 5]
 );
@@ -107,10 +107,9 @@ console.group(`Студент, який отримує стипендію`);
 //1.Со стипендией
 const budgetStudent = new BudgetStudent(
     `Вищої школи Психотерапії м.Одеса`,
-    1,
+    `1`,
     `Остап Родоманський`,
     [5, 4, 4, 5]
 );
-budgetStudent.marks = [5, 4, 4, 5];
 budgetStudent.getScholarship(1400);
 console.groupEnd();
