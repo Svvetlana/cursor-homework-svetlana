@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background: url("../img/img.jpg") fixed;
+  color: rgb(241, 11, 42);
+  padding: 50px;
+  font-size: 50px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.info-container {
+  display: flex;
+}
+
+.character {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+}
+
+.character-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  background-color: #4f5050;
+  border: 1px solid;
+  border-radius: 15px;
+  opacity: 0.9;
+  font-size: 25px;
+  margin: auto;
+  align-items: center;               
+}
+
+.character-info img {
+  max-width: 250px;
+  max-height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.character-info p {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: bottom;
+  padding: 5px;
+}
+
+.planet {
+  background-color: #4f5050;
+  border-radius: 15px;
+  border: 1px solid;
+  opacity: 0.9;
+}
+
+.planet li {
+  font-size: 25px;
+}
+
+.planet-info {
+  margin-left: 25px;
+  padding: 10px;
+  font-size: 25px;
+  color: white;
+  list-style-type: circle;
+
+}
+
+.choose-info-container {
+  display: flex;
+}
+
+button,
+select {
+  width: auto;
+  height: 50px;
+  border: rgb(241, 11, 42) solid 1px;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 2px;
+  font-family: 'MonteCarlo', cursive;
+  font-size: 30px;
+  opacity: 0.9;
+}

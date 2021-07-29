@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Homework#13</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	
+	</head>
+	<body>
+		<div class="block">
+			<h1>STAR WARS</h1>
+			<div class="container">
+				<div class="choose-info-container">
+					<div class="get-character-button">
+						
+						<select name="Films">
+							<option value="1">"A New Hope"</option>
+							<option value="2">"The Empire Strikes Back"</option>
+							<option value="3">"Return of the Jedi"</option>
+							<option value="4">"The Phantom Menace"</option>
+							<option value="5">"Attack of the Clones"</option>
+							<option value="6">"Revenge of the Sith"</option>
+						</select>
+                        <button id="getCharacterInfo">
+							About characters
+						</button>
+					</div>
+					<div class="planet-button">
+						<button id="getPlanetInfo">
+							About planets
+						</button>
+						<button id="next">Next</button>
+						<button id="prev">Prev</button>
+					</div>
+				</div>
+
+				<div class="info-container">
+					<div class="character" id="character-info"></div>
+					<div class="planet"><ul id="planet-info"></ul></div>
+				</div>
+			</div>
+			<script src="./js/script.js"></script>
+		</div>
+	</body>
+</html>
