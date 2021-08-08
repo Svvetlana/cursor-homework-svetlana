@@ -4,13 +4,18 @@ import Icon from './icon.jpg';
 import {
     maxPrice,
     suma,
-    getRandomPassword    
+    getRandomPassword,
+    pairs,
+    getRandomArray,
+    Student, student    
 } from './homework.js'
 
-console.log(`maxPrice`, maxPrice);
-console.log(`suma`, suma);
+console.log(`maxPrice: `, maxPrice);
+console.log(`suma: `, suma);
 console.log(`HW-3: ${getRandomPassword(8)}`);
-
+console.log('HW-4: ', pairs);
+console.log(`HW-5: Массив случайных чисел: ${getRandomArray(15, 1, 100)}`);
+console.log(`HW-8: student.getInfo: `, student.getInfo);
 
 function component() {
     const element = document.createElement('div');
