@@ -1,10 +1,10 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'development',
-  entry: './src/index.js',
+  entry: ['babel-polyfill','./src/index.js'],
+  mode: 'development',
   output: {
-    filename: 'bundle.js',
+    filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -17,6 +17,16 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env']
+          }
+        }
+      }
     ],
   },
 };
