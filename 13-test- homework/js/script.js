@@ -7,14 +7,11 @@ const buttonPrev = document.getElementById('prev');
 
 async function getAboutFilmCharacterInfo(url) {
     request(url)
-        .then(data => {
-            return data.characters;
-        })
-        .then(character => {
+        .then(({ characters }) => {
             characterInfo.innerHTML = '';
             planetInfo.innerHTML = '';
-            return character.map(e => getCharacterInfo(e));
-        });
+            return characters.map (e => getCharacterInfo(e))
+        })
 }
 
 async function getAboutPlanetInfo(url) {
@@ -30,12 +27,12 @@ async function getAboutPlanetInfo(url) {
 }
 
 async function getCharacterInfo(url) {
-    request(url).then(info => {
+    request(url).then(({ name, birth_year, gender }) => {
         return (
             characterInfo.innerHTML += `<div class="character-info">
-            <p>${info.name}</p><img src="img/${info.name}.jpg"/> 
-			<p>Birth_year ${info.birth_year}</p>
-			<p>Gender ${info.gender} </p></div>`
+            <p>${name}</p><img src="img/${name}.jpg"/> 
+			<p>Birth_year ${birth_year}</p>
+			<p>Gender ${gender} </p></div>`
         );
     });
 }
@@ -60,7 +57,7 @@ buttonGetPlanetInfo.addEventListener('click', () => {
 
 let page = 1;
 buttonNext.addEventListener('click', e => {
-    page = page + 1;
+    page += 1;
     if (page > 6) {
         page = 6;
     }
@@ -68,7 +65,7 @@ buttonNext.addEventListener('click', e => {
 });
 
 buttonPrev.addEventListener('click', () => {
-    page = page - 1;
+    page -= 1;
     if (page < 1) {
         page = 1;
     }
