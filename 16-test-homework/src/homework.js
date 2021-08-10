@@ -67,6 +67,18 @@ const getRandomArray = (length, min, max) => {
     return randomArray;
 }
 
+//6
+//7
+const ukraine = { tax: 0.195, middleSalary: 1789, vacancies: 11476 };
+
+function getMyTaxes(salary) {
+    
+    return +(this.tax * salary).toFixed(2);
+};
+
+
+
+//8
 class Student {
     constructor(university, course, fullName, marks) {
         this.university = university;
@@ -76,7 +88,6 @@ class Student {
         this.dismissed = false;
     }
 
-    //2.
     get getInfo() {
         return `Cтудент ${this.course}го курсу ${this.university}, ${this.fullName}`;
     }
@@ -89,11 +100,55 @@ const student = new Student(
     [5, 4, 4, 5]
 );
 
+//9
+function getRandomColor() {
+    const color = [];
+
+    for (let i = 0; i < 3; i++) {
+        color.push(Math.floor(Math.random() * 256));
+    }
+
+    return `rgb(${color[0]}, ${color[1]}, ${color[2]})`;
+};
+
+//11
+async function getRandomChinese(length) {
+    let result = '';
+
+    for (let i = 0; i < length; i++) {
+        const myPromise = new Promise((resolve) => {
+            setTimeout(() => {
+                const sign = String.fromCharCode(+Date.now().toString().slice(-5));
+                resolve(sign);
+            }, length * 50);
+        });
+        result += await myPromise;
+    }
+    
+    return result;
+};
+
+//14
+function* createIdGenerator() {
+    let i = 1;
+
+    while (true) {
+        yield i++;
+        }
+    }
+
+const idGenerator = createIdGenerator();
+
+
 export {
     maxPrice,
     suma,
     getRandomPassword,
     pairs,
     getRandomArray,
-    Student, student
+    getMyTaxes, ukraine,
+    Student, student,
+    getRandomColor,
+    getRandomChinese,
+    idGenerator
 };

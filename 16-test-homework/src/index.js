@@ -7,15 +7,27 @@ import {
     getRandomPassword,
     pairs,
     getRandomArray,
-    Student, student    
+    getMyTaxes, ukraine,
+    Student, student,
+    getRandomColor,
+    getRandomChinese,
+    idGenerator 
 } from './homework.js'
 
-console.log(`maxPrice: `, maxPrice);
-console.log(`suma: `, suma);
+console.log(`HW-1: maxPrice: `, maxPrice);
+console.log(`HW-2: suma: `, suma);
 console.log(`HW-3: ${getRandomPassword(8)}`);
 console.log('HW-4: ', pairs);
 console.log(`HW-5: Массив случайных чисел: ${getRandomArray(15, 1, 100)}`);
+console.log(
+  `HW-7: getMyTaxes.call(ukraine, 1500):`,getMyTaxes.call(ukraine, 1500)
+);
 console.log(`HW-8: student.getInfo: `, student.getInfo);
+console.log(`HW-9: getRandomColor: `, getRandomColor());
+console.log(`HW-11: getRandomChinese: `, getRandomChinese(4));
+console.log(`HW-14: createIdGenerator: `, idGenerator.next().value);
+console.log(`HW-14: createIdGenerator: `, idGenerator.next().value);
+console.log(`HW-14: createIdGenerator: `, idGenerator.next().value);
 
 function component() {
     const element = document.createElement('div');
